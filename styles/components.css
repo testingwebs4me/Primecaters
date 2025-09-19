@@ -179,23 +179,6 @@ body[lang="ar"] .scroll-to-top {
     box-shadow: 0 24px 80px rgba(209, 211, 212, 0.3);
 }
 
-/* Mobile-specific CTA enhancements */
-@media (max-width: 768px) {
-    .cta-button:active {
-        transform: translateY(-2px) scale(0.98);
-        transition: all 0.2s ease;
-    }
-    
-    .cta-button.primary:active {
-        background: rgba(255, 255, 255, 0.9);
-        color: #231F20;
-    }
-    
-    .cta-button.secondary:active {
-        background: rgba(209, 211, 212, 0.2);
-        color: #FFFFFF;
-    }
-}
 .cta-button.secondary {
     background: transparent;
     color: #FFFFFF;
