@@ -174,7 +174,7 @@
 
     .service-item {
         flex-direction: column !important;
-        gap: 3rem;
+        gap: 2.5rem;
         margin-bottom: 6rem;
     }
 
@@ -235,11 +235,14 @@
         padding: 0 20px;
         height: 300px;
         margin: 0 auto;
-        box-shadow: 0 16px 48px rgba(35, 31, 32, 0.1);
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
     }
 
     .service-main-image {
-        border-radius: 20px;
+        border-radius: 0;
+        border: none;
     }
 
     /* Video Mobile */
@@ -381,5 +384,8 @@
     .service-image {
         height: 250px;
         padding: 0 15px;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
     }
 }
