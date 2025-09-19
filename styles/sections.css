@@ -1,268 +1,600 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PRIME by Asma - Premium catering services, white label food production, and hotel & café supply in Saudi Arabia. Elevating culinary experiences with precision and passion.">
-    <meta name="keywords" content="catering, food services, white label, hotels, cafes, Saudi Arabia, PRIME, Asma">
-    <meta name="author" content="PRIME by Asma">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="font/Gemola 400.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="images/image_16.jpeg" as="image">
-    <link rel="preload" href="styles.css" as="style">
-    
-    <!-- DNS prefetch for external resources -->
-    <link rel="dns-prefetch" href="//i.ibb.co">
-    
-    <title>PRIME by Asma - Catering & Food Services</title>
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Critical CSS inlined for faster rendering -->
-    <style>
-        /* Critical above-the-fold styles */
-        body{font-family:'TestGemola',Arial,sans-serif!important;margin:0;padding:0;overflow-x:hidden}
-        .hero{position:relative;width:100%;height:100vh;min-height:800px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#231F20}
-        nav{position:fixed;top:0;left:0;right:0;background:rgba(35,31,32,0.98);backdrop-filter:blur(30px);padding:0.8rem 0;z-index:1000;height:80px}
-        .nav-container{max-width:1400px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:80px}
-    </style>
-</head>
-<body lang="en" dir="ltr">
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"></button>
+/* Section styles */
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-logo" id="navLogo">
-                <img src="https://i.ibb.co/VpqxrBy2/prime-logo-white.png" alt="PRIME Logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#catering" class="lang-en">Catering</a><a href="#catering" class="lang-ar">الضيافة</a></li>
-                <li><a href="#supplying" class="lang-en">Hotels & Cafés</a><a href="#supplying" class="lang-ar">المقاهي والفنادق</a></li>
-                <li><a href="#contact" class="lang-en">Contact Us</a><a href="#contact" class="lang-ar">تواصل معنا</a></li>
-            </ul>
-            <div class="nav-mobile-right">
-                <button class="language-toggle" id="languageToggle">
-                    <span class="lang-en">AR</span>
-                    <span class="lang-ar">EN</span>
-                </button>
-                <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #231F20;
+}
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href="#catering" class="mobile-menu-link lang-en">Catering</a><a href="#catering" class="mobile-menu-link lang-ar">الضيافة</a></li>
-            <li><a href="#supplying" class="mobile-menu-link lang-en">Hotels & Cafés</a><a href="#supplying" class="mobile-menu-link lang-ar">المقاهي والفنادق</a></li>
-            <li><a href="#contact" class="mobile-menu-link lang-en">Contact Us</a><a href="#contact" class="mobile-menu-link lang-ar">تواصل معنا</a></li>
-        </ul>
-    </div>
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-            <img src="images/image_16.jpeg" alt="PRIME Catering" class="hero-image">
-            <img src="images/image_16.jpeg" alt="PRIME Catering Hero Background" class="hero-image" loading="eager" fetchpriority="high">
-        </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="hero-title-main">PRIME</span>
-                    <span class="hero-title-sub lang-en">by Asma</span>
-                    <span class="hero-title-sub lang-ar">من أسماء</span>
-                </h1>
-                <p class="hero-description lang-en">Elevating culinary experiences with precision, passion, and unparalleled service</p>
-                <p class="hero-description lang-ar">نرتقي بالتجارب الطهوية بدقة وشغف وخدمة لا مثيل لها</p>
-                <div class="hero-cta">
-                    <a href="#services" class="cta-button primary">
-                        <span class="lang-en">Discover Our Services</span>
-                        <span class="lang-ar">اكتشف خدماتنا</span>
-                    </a>
-                    <a href="#contact" class="cta-button secondary">
-                        <span class="lang-en">Get In Touch</span>
-                        <span class="lang-ar">تواصل معنا</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(35, 31, 32, 0.7) 0%,
+        rgba(35, 31, 32, 0.4) 50%,
+        rgba(35, 31, 32, 0.8) 100%
+    );
+    z-index: 2;
+}
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title lang-en">What We Do</h2>
-            <h2 class="section-title lang-ar">خدماتنا</h2>
-            
-            <!-- Catering Services -->
-            <div id="catering" class="service-item">
-                <div class="service-content">
-                    <h3 class="lang-en">Catering Services</h3>
-                    <h3 class="lang-ar">خدمات الضيافة</h3>
-                    
-                    <p class="lang-en">Full-scale food production for any occasion — customized, punctual, and seamless.</p>
-                    <p class="lang-ar">نجهز لك الأكل كامل لأي مناسبة، بطريقة مرتبة، على الوقت، وبشكل يناسب ذوقك.</p>
-                    
-                    <ul class="service-features lang-en">
-                        <li><strong>Corporate Catering:</strong> Daily meals, executive meetings, staff events</li>
-                        <li><strong>Event Catering:</strong> Launches, weddings, private gatherings, VIP functions</li>
-                        <li><strong>Tailored Menus:</strong> Designed around your theme, crowd, or brand</li>
-                    </ul>
-                    
-                    <ul class="service-features lang-ar">
-                        <li><strong>ضيافة الشركات:</strong> وجبات يومية، اجتماعات رسمية، فعاليات للموظفين</li>
-                        <li><strong>ضيافة المناسبات:</strong> حفلات، تجمعات خاصة، مناسبات كبار الشخصيات</li>
-                        <li><strong>منيو مخصص:</strong> مصمم حسب فكرتك وجمهورك وبراندك</li>
-                    </ul>
-                </div>
-                <div class="service-image">
-                    <div class="slideshow-container">
-                        <div class="slideshow-images" id="cateringSlideshow">
-                            <img src="images/image_01.jpg" alt="Professional catering services for corporate events and special occasions" class="slideshow-image active" loading="lazy">
-                            <img src="images/image_02.jpg" alt="Elegant catering setup for special events" class="slideshow-image" loading="lazy">
-                            <img src="images/image_03.jpg" alt="Premium catering presentation" class="slideshow-image" loading="lazy">
-                            <img src="images/image_04.jpg" alt="Corporate catering services" class="slideshow-image" loading="lazy">
-                            <img src="images/image_05.jpg" alt="Luxury catering experience" class="slideshow-image" loading="lazy">
-                        </div>
-                        <div class="slideshow-indicators">
-                            <span class="slideshow-dot active" data-slide="0"></span>
-                            <span class="slideshow-dot" data-slide="1"></span>
-                            <span class="slideshow-dot" data-slide="2"></span>
-                            <span class="slideshow-dot" data-slide="3"></span>
-                            <span class="slideshow-dot" data-slide="4"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    transition: transform 0.1s ease-out;
+}
 
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    max-width: 1200px;
+    padding: 0 2rem;
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
 
-            <!-- Supplying Hotels & Cafés -->
-            <div id="supplying" class="service-item">
-                <div class="service-content">
-                    <h3 class="lang-en">Supplying Hotels & Cafés</h3>
-                    <h3 class="lang-ar">خدمة المقاهي والفنادق</h3>
-                    
-                    <p class="lang-en">Baked goods, sweets, and snacks — made daily, delivered fresh.</p>
-                    <p class="lang-ar">حلويات، مخبوزات، وسناكات – طازجة كل يوم وتوصل وهي فرش.</p>
-                    
-                    <ul class="service-features lang-en">
-                        <li>For cafés, hotel lounges, and concept stores</li>
-                        <li>Beautifully made, ready-to-serve items that customers actually buy</li>
-                        <li>Flexible, dependable restocking based on your business volume</li>
-                    </ul>
-                    
-                    <ul class="service-features lang-ar">
-                        <li>نخدم المقاهي، اللوبيات بالفنادق، وبعض المحلات المميزة</li>
-                        <li>منتجات جميلة وجاهزة للتقديم يشتريها الزبائن فعلاً</li>
-                        <li>نوصل لك كميات حسب احتياجك وبشكل منتظم ومرن</li>
-                    </ul>
-                </div>
-                <div class="service-image">
-                    <div class="slideshow-container">
-                        <div class="slideshow-images" id="supplyingSlideshow">
-                            <img src="images/image_11.jpg" alt="Fresh baked goods and snacks for hotels and cafés" class="slideshow-image active" loading="lazy">
-                            <img src="images/image_12.jpeg" alt="Hotel and café supply services" class="slideshow-image" loading="lazy">
-                            <img src="images/image_13.jpeg" alt="Daily fresh bakery products" class="slideshow-image" loading="lazy">
-                            <img src="images/image_14.jpeg" alt="Premium café supplies" class="slideshow-image" loading="lazy">
-                            <img src="images/image_15.jpeg" alt="Hotel lounge refreshments" class="slideshow-image" loading="lazy">
-                        </div>
-                        <div class="slideshow-indicators">
-                            <span class="slideshow-dot active" data-slide="0"></span>
-                            <span class="slideshow-dot" data-slide="1"></span>
-                            <span class="slideshow-dot" data-slide="2"></span>
-                            <span class="slideshow-dot" data-slide="3"></span>
-                            <span class="slideshow-dot" data-slide="4"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
 
-        <!-- Video Section -->
-        <div class="video-section">
-            <div class="container">
-                <h2 class="section-title lang-en">See Our Kitchen in Action</h2>
-                <h2 class="section-title lang-ar">شاهد مطبخنا في العمل</h2>
-                
-                <div class="video-container">
-                    <video 
-                        id="mainVideo" 
-                        class="main-video" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline
-                        poster="images/WhatsApp Image 2025-09-05 at 18.00.52.jpeg"
-                    >
-                        <source src="videos/Video Apr 06, 1 07 43 AM.mp4" type="video/mp4">
-                        <p class="lang-en">Your browser does not support the video tag.</p>
-                        <p class="lang-ar">متصفحك لا يدعم تشغيل الفيديو.</p>
-                    </video>
-                    
-                    <!-- Video Controls Overlay -->
-                    <div class="video-controls">
-                        <button class="video-control-btn play-pause-btn" id="playPauseBtn" aria-label="Play/Pause video">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                            <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
-                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                            </svg>
-                        </button>
-                        
-                        <button class="video-control-btn sound-btn" id="soundBtn" aria-label="Toggle sound">
-                            <svg class="sound-off-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
-                            </svg>
-                            <svg class="sound-on-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
-                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                            </svg>
-                        </button>
-                        
-                        <div class="video-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progressFill"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Video Info Overlay -->
-                    <div class="video-info">
-                        <h3 class="lang-en">Fresh Daily Production</h3>
-                        <h3 class="lang-ar">إنتاج طازج يومياً</h3>
-                        <p class="lang-en">Watch how we prepare your orders with care and precision</p>
-                        <p class="lang-ar">شاهد كيف نحضر طلباتك بعناية ودقة</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="lang-en">Let's Work Together</h2>
-            <h2 class="lang-ar">معك من أول خطوة... اطلب الآن</h2>
-            
-            <p class="lang-en">Looking to launch your food line, fuel an event, or stock your café with premium snacks? <strong>We're ready when you are.</strong></p>
-            <p class="lang-ar">تبي تطلق خط منتجات غذائية، تسوي مناسبة، أو تعبي مقهاك بسناكات مميزة؟ <strong>حنا جاهزين متى ما كنت جاهز.</strong></p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="contact-icon" aria-hidden="true">📩</span>
-                    <a href="mailto:Sales@Prime.sa" style="color: inherit; text-decoration: none;">
-                        <span class="contact-text">Sales@Prime.sa</span>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+.hero-title-main {
+    font-size: 7rem;
+    font-weight: 400;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #FFFFFF 0%, #D1D3D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+    animation: titleGlow 4s ease-in-out infinite alternate;
+    position: relative;
+}
+
+body[lang="ar"] .hero-title-main {
+    letter-spacing: 10px;
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+        filter: brightness(1);
+    }
+    100% {
+        text-shadow: 0 12px 48px rgba(255, 255, 255, 0.5);
+        filter: brightness(1.1);
+    }
+}
+
+.hero-title-sub {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #D1D3D4;
+    opacity: 0.9;
+    text-transform: lowercase;
+}
+
+.hero-description {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+.scroll-arrow {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+}
+
+.scroll-arrow::after {
+    content: '↓';
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.scroll-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+/* Services Section */
+.services {
+    padding: 10rem 0;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 50%, #FFFFFF 100%);
+    z-index: 1;
+}
+
+.services .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 6rem;
+    color: #231F20;
+    letter-spacing: 2px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.section-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #231F20, #D1D3D4);
+    border-radius: 2px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    margin-bottom: 8rem;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.service-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+body[lang="ar"] .service-item {
+    flex-direction: row-reverse;
+}
+
+body[lang="ar"] .service-item:nth-child(even) {
+    flex-direction: row;
+}
+
+.service-content {
+    flex: 1;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(209, 211, 212, 0.2);
+    box-shadow: 0 20px 60px rgba(35, 31, 32, 0.08);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(209, 211, 212, 0.1), transparent);
+    transition: left 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.service-content:hover::before {
+    left: 100%;
+}
+
+.service-content:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 40px 100px rgba(35, 31, 32, 0.15);
+    border-color: rgba(209, 211, 212, 0.4);
+}
+
+.service-content h3 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #231F20;
+    letter-spacing: 1px;
+}
+
+.service-content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #231F20;
+    opacity: 0.8;
+}
+
+.service-features {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.service-features li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #231F20;
+    padding-left: 2rem;
+    position: relative;
+    opacity: 0.9;
+}
+
+body[lang="ar"] .service-features li {
+    padding-left: 0;
+    padding-right: 2rem;
+}
+
+.service-features li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #D1D3D4;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+body[lang="ar"] .service-features li::before {
+    left: auto;
+    right: 0;
+}
+
+.service-image {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(35, 31, 32, 0.2);
+    border: 1px solid rgba(209, 211, 212, 0.3);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.service-image:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 50px 120px rgba(35, 31, 32, 0.3);
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.slideshow-image.active {
+    opacity: 1;
+}
+
+.slideshow-image.fade-out {
+    opacity: 0;
+}
+
+.slideshow-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slideshow-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.slideshow-dot.active {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.4);
+}
+
+.slideshow-dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+/* Video Section */
+.video-section {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 50%, #F8F9FA 100%);
+    margin-top: 6rem;
+}
+
+.video-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 40px 120px rgba(35, 31, 32, 0.2);
+    background: #000;
+    border: 1px solid rgba(209, 211, 212, 0.3);
+}
+
+.main-video {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    display: block;
+    object-fit: cover;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 3rem 2rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.video-container:hover .video-controls {
+    opacity: 1;
+}
+
+.video-progress {
+    flex: 1;
+    margin: 0 1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #231F20 0%, #3a3436 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(209, 211, 212, 0.1) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.contact .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #D1D3D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact h2.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin-bottom: 4rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    transition-delay: 0.2s;
+}
+
+.contact p.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2.5rem 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+}
+
+.contact-item.animate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-item:hover::before {
+    left: 100%;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.3);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.contact-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
