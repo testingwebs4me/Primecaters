@@ -67,11 +67,12 @@
         padding: 0 20px;
         height: 80px;
         min-height: 80px;
+        min-height: 80px;
     }
 
     nav {
         height: 80px;
-        padding: 1rem 0;
+        padding: 0.8rem 0;
     }
 
     .nav-links {
@@ -83,7 +84,7 @@
     }
 
     .nav-logo {
-        height: 70px;
+        height: 60px;
     }
 
     /* Improved mobile spacing */
