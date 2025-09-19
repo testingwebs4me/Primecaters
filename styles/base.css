@@ -84,35 +84,49 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, li {
 
 /* Language visibility classes */
 .lang-en, .lang-ar {
-    display: none;
+    display: none !important;
 }
 
 body[lang="en"] .lang-en {
-    display: block;
+    display: block !important;
 }
 
 body[lang="en"] .lang-en.inline {
-    display: inline;
+    display: inline !important;
 }
 
 body[lang="ar"] .lang-ar {
-    display: block;
+    display: block !important;
 }
 
 body[lang="ar"] .lang-ar.inline {
-    display: inline;
+    display: inline !important;
+}
+
+/* Navigation language visibility */
+.nav-links .lang-en,
+.nav-links .lang-ar {
+    display: none !important;
+}
+
+body[lang="en"] .nav-links .lang-en {
+    display: block !important;
+}
+
+body[lang="ar"] .nav-links .lang-ar {
+    display: block !important;
 }
 
 /* Fix mobile menu language display */
 .mobile-menu .lang-en,
 .mobile-menu .lang-ar {
-    display: none;
+    display: none !important;
 }
 
 body[lang="en"] .mobile-menu .lang-en {
-    display: block;
+    display: block !important;
 }
 
 body[lang="ar"] .mobile-menu .lang-ar {
-    display: block;
+    display: block !important;
 }
