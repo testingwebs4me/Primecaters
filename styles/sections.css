@@ -908,7 +908,7 @@ body[lang="ar"] .service-features li::before {
 }
 
 .contact h2.animate::after {
-    width: 120px;
+    width: 0px;
 }
 
 .contact p {
