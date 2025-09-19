@@ -674,8 +674,8 @@ body[lang="ar"] .service-features li::before {
 
 /* Video Section */
 .video-section {
-    background: transparent;
-    padding: 8rem 0;
+    background: #FFFFFF;
+    padding: 12rem 0;
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
@@ -685,15 +685,18 @@ body[lang="ar"] .service-features li::before {
 
 .video-container {
     position: relative;
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
     border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 32px 80px rgba(35, 31, 32, 0.2);
-    background: transparent;
+    background: #000;
     transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
     transform: translate3d(0, 0, 0);
     will-change: transform, box-shadow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .video-container:hover {
@@ -706,6 +709,8 @@ body[lang="ar"] .service-features li::before {
     height: auto;
     display: block;
     border-radius: 25px;
+    object-fit: contain;
+    max-height: 600px;
 }
 
 /* Video Controls Overlay - Floating Glass Effect */
