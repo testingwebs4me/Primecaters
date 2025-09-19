@@ -7,7 +7,17 @@
     "start": "npx serve -s . -l 8000",
     "dev": "npx serve -s . -l 8000"
   },
-  "keywords": ["catering", "food", "services", "website"],
+  "keywords": [
+    "catering",
+    "food",
+    "services",
+    "website"
+  ],
   "author": "PRIME by Asma",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "imagemin": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-webp": "^8.0.0"
+  }
 }
