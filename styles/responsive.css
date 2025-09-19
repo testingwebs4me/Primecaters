@@ -231,20 +231,13 @@
 
     /* Mobile Service Images */
     .service-image {
-        width: 100vw;
-        max-width: none;
-        margin-left: calc(-50vw + 50%);
-        margin-right: calc(-50vw + 50%);
-        padding: 0;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        width: 100%;
+        max-width: 600px;
         height: 300px;
-        box-shadow: none;
-        border: none;
+        margin: 0 auto;
         border-radius: 0;
+        border: none;
+        box-shadow: none;
     }
 
     .slideshow-indicators {
@@ -399,17 +392,12 @@
 
     /* Extra Small Mobile Gallery */
     .service-image {
-        width: 100vw;
-        max-width: none;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        width: 100%;
+        max-width: 500px;
         height: 250px;
-        padding: 0;
-        border: none;
+        margin: 0 auto;
         border-radius: 0;
+        border: none;
         box-shadow: none;
     }
 
