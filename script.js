@@ -429,7 +429,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function initSlideshows() {
     const slideshows = [
         { id: 'cateringSlideshow', interval: null },
-        { id: 'whiteLabelSlideshow', interval: null },
         { id: 'supplyingSlideshow', interval: null }
     ];
     
