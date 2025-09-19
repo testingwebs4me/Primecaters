@@ -340,7 +340,7 @@ function handleAnchorClick(e) {
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) {
-        const headerOffset = 140; // Account for larger fixed navigation
+        const headerOffset = 100; // Account for fixed navigation
         const elementPosition = target.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
