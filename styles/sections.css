@@ -718,6 +718,16 @@ body[lang="ar"] .service-features li::before {
 
 .main-video {
     width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 25px;
+}
+
+/* Remove any video info overlay styles */
+.video-info {
+    display: none !important;
+}
+
 /* Contact Section */
 .contact {
     background: linear-gradient(135deg, #231F20 0%, #2a2426 25%, #231F20 50%, #2a2426 75%, #1a1718 100%);
