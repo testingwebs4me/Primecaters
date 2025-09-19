@@ -190,8 +190,6 @@ function initVideoPlayer() {
     // Show controls when video is paused on mobile
     video.addEventListener('pause', () => {
         if (window.innerWidth <= 768) {
-            const controls = document.querySelector('.video-controls');
-            if (controls) controls.style.opacity = '1';
             clearTimeout(controlsTimeout);
         }
     });

@@ -46,7 +46,7 @@
 /* Better mobile positioning */
 @media (max-width: 768px) {
     .language-toggle {
-        top: 15px;
+        top: 20px;
         right: 15px;
         padding: 10px 16px;
         font-size: 0.85rem;

@@ -756,52 +756,6 @@ body[lang="ar"] .service-features li::before {
     margin: 0 1.5rem;
 }
 
-.video-info {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    right: 2rem;
-    color: white;
-    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    transform: translate3d(0, 30px, 0);
-    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.2);
-    padding: 1.5rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    will-change: transform, opacity;
-}
-
-.video-container:hover .video-info {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-}
-
-.video-info h3 {
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    animation: videoTitleGlow 4s cubic-bezier(0.23, 1, 0.32, 1) infinite alternate;
-    font-family: 'TestGemola', Arial, sans-serif !important;
-}
-
-@keyframes videoTitleGlow {
-    0% { text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8); }
-    100% { text-shadow: 2px 2px 24px rgba(0, 0, 0, 0.9), 0 0 32px rgba(255, 255, 255, 0.3); }
-}
-
-.video-info p {
-    font-size: 1.1rem;
-    opacity: 0.92;
-    font-weight: 300;
-    line-height: 1.7;
-    font-family: 'TestGemola', Arial, sans-serif !important;
-    letter-spacing: 0.3px;
-}
-
 /* Contact Section */
 .contact {
     background: linear-gradient(135deg, #231F20 0%, #2a2426 25%, #231F20 50%, #2a2426 75%, #1a1718 100%);
