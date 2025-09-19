@@ -391,6 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     loadLanguagePreference();
     initScrollAnimations();
+    initSlideshows();
     
     // Initialize navbar as visible
     DOMCache.nav?.classList.add('nav-visible');
@@ -423,6 +424,77 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Slideshow functionality
+function initSlideshows() {
+    const slideshows = [
+        { id: 'cateringSlideshow', interval: null },
+        { id: 'whiteLabelSlideshow', interval: null },
+        { id: 'supplyingSlideshow', interval: null }
+    ];
+    
+    slideshows.forEach(slideshow => {
+        const container = document.getElementById(slideshow.id);
+        if (container) {
+            startSlideshow(container, slideshow);
+        }
+    });
+}
+
+function startSlideshow(container, slideshowObj) {
+    const images = container.querySelectorAll('.slideshow-image');
+    const dots = container.parentElement.querySelectorAll('.slideshow-dot');
+    let currentSlide = 0;
+    
+    if (images.length === 0) return;
+    
+    function showSlide(index) {
+        // Remove active class from all images and dots
+        images.forEach(img => {
+            img.classList.remove('active');
+            img.classList.add('fade-out');
+        });
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Add active class to current image and dot
+        setTimeout(() => {
+            images[index].classList.remove('fade-out');
+            images[index].classList.add('active');
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+        }, 100);
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % images.length;
+        showSlide(currentSlide);
+    }
+    
+    // Start the slideshow with 3.5 second intervals
+    slideshowObj.interval = setInterval(nextSlide, 3500);
+    
+    // Add click handlers for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+            
+            // Reset the interval
+            clearInterval(slideshowObj.interval);
+            slideshowObj.interval = setInterval(nextSlide, 3500);
+        });
+    });
+    
+    // Pause slideshow on hover (optional enhancement)
+    container.addEventListener('mouseenter', () => {
+        clearInterval(slideshowObj.interval);
+    });
+    
+    container.addEventListener('mouseleave', () => {
+        slideshowObj.interval = setInterval(nextSlide, 3500);
+    });
+}
 
 // Event listeners with proper cleanup
 window.addEventListener('scroll', handleScroll, { passive: true });

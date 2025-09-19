@@ -240,6 +240,16 @@
         border-radius: 0;
     }
 
+    .slideshow-indicators {
+        bottom: 10px;
+        gap: 6px;
+    }
+
+    .slideshow-dot {
+        width: 6px;
+        height: 6px;
+    }
+
     .service-main-image {
         border-radius: 0;
         border: none;
@@ -387,5 +397,15 @@
         border: none;
         border-radius: 0;
         box-shadow: none;
+    }
+
+    .slideshow-indicators {
+        bottom: 8px;
+        gap: 5px;
+    }
+
+    .slideshow-dot {
+        width: 5px;
+        height: 5px;
     }
 }
