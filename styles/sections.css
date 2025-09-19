@@ -700,7 +700,7 @@ body[lang="ar"] .service-features li::before {
 
 .video-container {
     position: relative;
-    max-width: 600px;
+    max-width: 480px;
     margin: 0 auto;
     border-radius: 25px;
     overflow: hidden;
@@ -709,7 +709,6 @@ body[lang="ar"] .service-features li::before {
     transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
     transform: translate3d(0, 0, 0);
     will-change: transform, box-shadow;
-    aspect-ratio: 16/9;
 }
 
 .video-container:hover {
@@ -719,8 +718,7 @@ body[lang="ar"] .service-features li::before {
 
 .main-video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
     border-radius: 25px;
 }
