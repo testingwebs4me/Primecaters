@@ -1,0 +1,6 @@
+/* Main stylesheet - imports all modular CSS files */
+@import url('./styles/base.css');
+@import url('./styles/components.css');
+@import url('./styles/layout.css');
+@import url('./styles/sections.css');
+@import url('./styles/responsive.css');
