@@ -656,6 +656,20 @@ body[lang="ar"] .service-features li {
     animation: bulletPulse 3s cubic-bezier(0.23, 1, 0.32, 1) infinite alternate;
 }
 
+/* Enhanced mobile bullet points */
+@media (max-width: 768px) {
+    .service-features li::before {
+        content: '●';
+        font-size: 1.2em;
+        color: #231F20;
+        opacity: 0.8;
+    }
+    
+    .service-item:hover .service-features li::before {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
 @keyframes bulletPulse {
     0% { transform: scale(1); opacity: 0.8; }
     100% { transform: scale(1.3); opacity: 1; }
