@@ -379,6 +379,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize DOM cache
     DOMCache.init();
     
+    // Add skip navigation
+    const skipNav = document.createElement('a');
+    skipNav.href = '#main-content';
+    skipNav.className = 'skip-nav';
+    skipNav.textContent = 'Skip to main content';
+    document.body.insertBefore(skipNav, document.body.firstChild);
+    
     // Set initial language if not already set
     const body = document.body;
     const html = document.documentElement;
@@ -401,6 +408,13 @@ document.addEventListener('DOMContentLoaded', function() {
         initVideoPlayer();
     }
     
+    // Add main content ID for skip navigation
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        heroSection.id = 'main-content';
+        heroSection.setAttribute('tabindex', '-1');
+    }
+    
     // Event listeners
     document.querySelector('.nav-logo')?.addEventListener('click', handleLogoClick);
     
@@ -412,6 +426,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu links
     document.querySelectorAll('.mobile-menu a').forEach(link => {
         link.addEventListener('click', handleMobileMenuLinkClick);
+    });
+    
+    // Improve keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        // Close mobile menu with Escape key
+        if (e.key === 'Escape' && DOMCache.mobileMenu?.classList.contains('active')) {
+            closeMobileMenu();
+        }
+        
+        // Skip navigation with Tab
+        if (e.key === 'Tab' && e.target.classList.contains('skip-nav')) {
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+                mainContent.focus();
+            }
+        }
     });
     
     // Clean up will-change after animations complete

@@ -4,7 +4,7 @@
 .language-toggle {
     position: fixed;
     top: 20px;
-    right: 80px;
+    right: 20px;
     background: rgba(35, 31, 32, 0.9);
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.3);
@@ -25,6 +25,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Improved accessibility */
+    outline: none;
+    border: 2px solid transparent;
+}
+
+.language-toggle:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
 .language-toggle:hover {
@@ -33,6 +41,18 @@
     border-color: rgba(255, 255, 255, 0.8);
     transform: translateY(-1px) scale(1.05);
     box-shadow: 0 8px 30px rgba(35, 31, 32, 0.4);
+}
+
+/* Better mobile positioning */
+@media (max-width: 768px) {
+    .language-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        min-width: 50px;
+        min-height: 40px;
+    }
 }
 
 /* Scroll to Top Button */
@@ -59,6 +79,12 @@
     backdrop-filter: blur(20px);
     position: relative;
     overflow: hidden;
+    /* Improved accessibility */
+    outline: none;
+}
+
+.scroll-to-top:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 8px 32px rgba(35, 31, 32, 0.3);
 }
 
 .scroll-to-top::before {
