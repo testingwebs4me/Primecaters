@@ -330,7 +330,7 @@ body[lang="ar"] .hero-title-sub {
 /* Services Section */
 .services {
     padding: 12rem 0;
-    background: #FFFFFF;
+    background: transparent;
     position: relative;
     overflow: hidden;
     opacity: 0;
@@ -674,7 +674,7 @@ body[lang="ar"] .service-features li::before {
 
 /* Video Section */
 .video-section {
-    background: #ffffff;
+    background: transparent;
     padding: 8rem 0;
     margin-top: 0;
     margin-bottom: 0;
