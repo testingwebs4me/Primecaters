@@ -849,7 +849,7 @@ body[lang="ar"] .service-features li::before {
 .contact {
     background: linear-gradient(135deg, #231F20 0%, #2a2426 25%, #231F20 50%, #2a2426 75%, #1a1718 100%);
     color: white;
-    padding: 10rem 0;
+    padding: 18rem 0 10rem 0;
     text-align: center;
     position: relative;
     overflow: hidden;
