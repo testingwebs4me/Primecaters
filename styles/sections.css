@@ -674,28 +674,13 @@ body[lang="ar"] .service-features li::before {
 
 /* Video Section */
 .video-section {
-    background: linear-gradient(135deg, rgba(209, 211, 212, 0.05) 0%, #ffffff 25%, rgba(209, 211, 212, 0.08) 50%, #ffffff 75%, rgba(209, 211, 212, 0.05) 100%);
+    background: #ffffff;
     padding: 8rem 0;
-    margin-top: 6rem;
+    margin-top: 0;
+    margin-bottom: 0;
     position: relative;
     overflow: hidden;
     contain: layout style paint;
-}
-
-.video-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 30% 20%, rgba(35, 31, 32, 0.03) 0%, transparent 50%);
-    animation: videoBackgroundFloat 15s cubic-bezier(0.23, 1, 0.32, 1) infinite alternate;
-}
-
-@keyframes videoBackgroundFloat {
-    0% { transform: translateX(0) scale(1); }
-    100% { transform: translateX(30px) scale(1.03); }
 }
 
 .video-container {
@@ -854,6 +839,7 @@ body[lang="ar"] .service-features li::before {
     position: relative;
     overflow: hidden;
     contain: layout style paint;
+    margin-top: 0;
 }
 
 .contact::before {
