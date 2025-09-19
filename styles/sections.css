@@ -700,7 +700,7 @@ body[lang="ar"] .service-features li::before {
 
 .video-container {
     position: relative;
-    max-width: 700px;
+    max-width: 500px;
     margin: 0 auto;
     border-radius: 25px;
     overflow: hidden;
@@ -718,7 +718,8 @@ body[lang="ar"] .service-features li::before {
 
 .main-video {
     width: 100%;
-    height: auto;
+    height: 280px;
+    object-fit: cover;
     display: block;
     border-radius: 25px;
 }

@@ -263,6 +263,8 @@
     }
 
     .main-video {
+        height: auto;
+        object-fit: cover;
         min-height: clamp(200px, 40vw, 250px);
     }
 
