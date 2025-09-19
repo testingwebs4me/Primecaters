@@ -1,296 +1,964 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PRIME by Asma - Premium catering services, white label food production, and hotel & café supply in Saudi Arabia. Elevating culinary experiences with precision and passion.">
-    <meta name="keywords" content="catering, food services, white label, hotels, cafes, Saudi Arabia, PRIME, Asma">
-    <meta name="author" content="PRIME by Asma">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="font/Gemola 400.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="images/image_16.jpeg" as="image">
-    <link rel="preload" href="styles.css" as="style">
-    
-    <!-- DNS prefetch for external resources -->
-    <link rel="dns-prefetch" href="//i.ibb.co">
-    
-    <title>PRIME by Asma - Catering & Food Services</title>
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Critical CSS inlined for faster rendering -->
-    <style>
-        /* Critical above-the-fold styles */
-        body{font-family:'TestGemola',Arial,sans-serif!important;margin:0;padding:0;overflow-x:hidden}
-        .hero{position:relative;width:100%;height:100vh;min-height:800px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#231F20}
-        nav{position:fixed;top:0;left:0;right:0;background:rgba(35,31,32,0.98);backdrop-filter:blur(30px);padding:0.8rem 0;z-index:1000;height:80px}
-        .nav-container{max-width:1400px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:80px}
-    </style>
-</head>
-<body lang="en" dir="ltr">
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"></button>
+/* Section styles */
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-logo" id="navLogo">
-                <img src="https://i.ibb.co/VpqxrBy2/prime-logo-white.png" alt="PRIME Logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#catering" class="lang-en">Catering</a><a href="#catering" class="lang-ar">الضيافة</a></li>
-                <li><a href="#supplying" class="lang-en">Hotels & Cafés</a><a href="#supplying" class="lang-ar">المقاهي والفنادق</a></li>
-                <li><a href="#contact" class="lang-en">Contact Us</a><a href="#contact" class="lang-ar">تواصل معنا</a></li>
-            </ul>
-            <div class="nav-mobile-right">
-                <button class="language-toggle" id="languageToggle">
-                    <span class="lang-en">AR</span>
-                    <span class="lang-ar">EN</span>
-                </button>
-                <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+    contain: layout style paint;
+}
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href="#catering" class="mobile-menu-link lang-en">Catering</a><a href="#catering" class="mobile-menu-link lang-ar">الضيافة</a></li>
-            <li><a href="#supplying" class="mobile-menu-link lang-en">Hotels & Cafés</a><a href="#supplying" class="mobile-menu-link lang-ar">المقاهي والفنادق</a></li>
-            <li><a href="#contact" class="mobile-menu-link lang-en">Contact Us</a><a href="#contact" class="mobile-menu-link lang-ar">تواصل معنا</a></li>
-        </ul>
-    </div>
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    will-change: transform;
+    transform: translateZ(0);
+}
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-            <img src="images/image_16.jpeg" alt="PRIME Catering" class="hero-image">
-            <img src="images/image_16.jpeg" alt="PRIME Catering Hero Background" class="hero-image" loading="eager" fetchpriority="high">
-        </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="hero-title-main">PRIME</span>
-                    <span class="hero-title-sub lang-en">by Asma</span>
-                    <span class="hero-title-sub lang-ar">من أسماء</span>
-                </h1>
-                <p class="hero-description lang-en">Elevating culinary experiences with precision, passion, and unparalleled service</p>
-                <p class="hero-description lang-ar">نرتقي بالتجارب الطهوية بدقة وشغف وخدمة لا مثيل لها</p>
-                <div class="hero-cta">
-                    <a href="#services" class="cta-button primary">
-                        <span class="lang-en">Discover Our Services</span>
-                        <span class="lang-ar">اكتشف خدماتنا</span>
-                    </a>
-                    <a href="#contact" class="cta-button secondary">
-                        <span class="lang-en">Get In Touch</span>
-                        <span class="lang-ar">تواصل معنا</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+    filter: brightness(0.6) contrast(1.2) saturate(0.8);
+    will-change: transform;
+    transform: translateZ(0);
+}
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title lang-en">What We Do</h2>
-            <h2 class="section-title lang-ar">خدماتنا</h2>
-            
-            <!-- Catering Services -->
-            <div id="catering" class="service-item">
-                <div class="service-content">
-                    <h3 class="lang-en">Catering Services</h3>
-                    <h3 class="lang-ar">خدمات الضيافة</h3>
-                    
-                    <p class="lang-en">Full-scale food production for any occasion — customized, punctual, and seamless.</p>
-                    <p class="lang-ar">نجهز لك الأكل كامل لأي مناسبة، بطريقة مرتبة، على الوقت، وبشكل يناسب ذوقك.</p>
-                    
-                    <ul class="service-features lang-en">
-                        <li><strong>Corporate Catering:</strong> Daily meals, executive meetings, staff events</li>
-                        <li><strong>Event Catering:</strong> Launches, weddings, private gatherings, VIP functions</li>
-                        <li><strong>Tailored Menus:</strong> Designed around your theme, crowd, or brand</li>
-                    </ul>
-                    
-                    <ul class="service-features lang-ar">
-                        <li><strong>ضيافة الشركات:</strong> وجبات يومية، اجتماعات رسمية، فعاليات للموظفين</li>
-                        <li><strong>ضيافة المناسبات:</strong> حفلات، تجمعات خاصة، مناسبات كبار الشخصيات</li>
-                        <li><strong>منيو مخصص:</strong> مصمم حسب فكرتك وجمهورك وبراندك</li>
-                    </ul>
-                </div>
-                <div class="service-image">
-                    <div class="slideshow-container">
-                        <div class="slideshow-images" id="cateringSlideshow">
-                            <img src="images/image_01.jpg" alt="Professional catering services for corporate events and special occasions" class="slideshow-image active" loading="lazy">
-                            <img src="images/image_02.jpg" alt="Elegant catering setup for special events" class="slideshow-image" loading="lazy">
-                            <img src="images/image_03.jpg" alt="Premium catering presentation" class="slideshow-image" loading="lazy">
-                            <img src="images/image_04.jpg" alt="Corporate catering services" class="slideshow-image" loading="lazy">
-                            <img src="images/image_05.jpg" alt="Luxury catering experience" class="slideshow-image" loading="lazy">
-                        </div>
-                        <div class="slideshow-indicators">
-                            <span class="slideshow-dot active" data-slide="0"></span>
-                            <span class="slideshow-dot" data-slide="1"></span>
-                            <span class="slideshow-dot" data-slide="2"></span>
-                            <span class="slideshow-dot" data-slide="3"></span>
-                            <span class="slideshow-dot" data-slide="4"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(35, 31, 32, 0.96) 0%,
+        rgba(35, 31, 32, 0.89) 25%,
+        rgba(35, 31, 32, 0.82) 50%,
+        rgba(35, 31, 32, 0.89) 75%,
+        rgba(35, 31, 32, 0.98) 100%
+    );
+    backdrop-filter: blur(6px);
+}
 
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 1200px;
+    padding: 0 3rem;
+    opacity: 0;
+    transform: translateY(60px);
+    animation: heroContentFadeIn 2s cubic-bezier(0.23, 1, 0.32, 1) 0.5s forwards;
+    will-change: transform, opacity;
+    transform: translate3d(0, 60px, 0);
+}
 
-            <!-- Supplying Hotels & Cafés -->
-            <div id="supplying" class="service-item">
-                <div class="service-content">
-                    <h3 class="lang-en">Supplying Hotels & Cafés</h3>
-                    <h3 class="lang-ar">خدمة المقاهي والفنادق</h3>
-                    
-                    <p class="lang-en">Baked goods, sweets, and snacks — made daily, delivered fresh.</p>
-                    <p class="lang-ar">حلويات، مخبوزات، وسناكات – طازجة كل يوم وتوصل وهي فرش.</p>
-                    
-                    <ul class="service-features lang-en">
-                        <li>For cafés, hotel lounges, and concept stores</li>
-                        <li>Beautifully made, ready-to-serve items that customers actually buy</li>
-                        <li>Flexible, dependable restocking based on your business volume</li>
-                    </ul>
-                    
-                    <ul class="service-features lang-ar">
-                        <li>نخدم المقاهي، اللوبيات بالفنادق، وبعض المحلات المميزة</li>
-                        <li>منتجات جميلة وجاهزة للتقديم يشتريها الزبائن فعلاً</li>
-                        <li>نوصل لك كميات حسب احتياجك وبشكل منتظم ومرن</li>
-                    </ul>
-                </div>
-                <div class="service-image">
-                    <div class="slideshow-container">
-                        <div class="slideshow-images" id="supplyingSlideshow">
-                            <img src="images/image_11.jpg" alt="Fresh baked goods and snacks for hotels and cafés" class="slideshow-image active" loading="lazy">
-                            <img src="images/image_12.jpeg" alt="Hotel and café supply services" class="slideshow-image" loading="lazy">
-                            <img src="images/image_13.jpeg" alt="Daily fresh bakery products" class="slideshow-image" loading="lazy">
-                            <img src="images/image_14.jpeg" alt="Premium café supplies" class="slideshow-image" loading="lazy">
-                            <img src="images/image_15.jpeg" alt="Hotel lounge refreshments" class="slideshow-image" loading="lazy">
-                        </div>
-                        <div class="slideshow-indicators">
-                            <span class="slideshow-dot active" data-slide="0"></span>
-                            <span class="slideshow-dot" data-slide="1"></span>
-                            <span class="slideshow-dot" data-slide="2"></span>
-                            <span class="slideshow-dot" data-slide="3"></span>
-                            <span class="slideshow-dot" data-slide="4"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+/* Hero animations */
+@keyframes heroContentFadeIn {
+    0% { 
+        opacity: 0; 
+        transform: translate3d(0, 60px, 0) scale(0.95);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
 
-        <!-- Video Section -->
-        <div class="video-section">
-            <div class="container">
-                <h2 class="section-title lang-en">See Our Kitchen in Action</h2>
-                <h2 class="section-title lang-ar">شاهد مطبخنا في العمل</h2>
-                
-                <div class="video-container">
-                    <video 
-                        id="mainVideo" 
-                        class="main-video" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline
-                        poster="images/WhatsApp Image 2025-09-05 at 18.00.52.jpeg"
-                    >
-                        <source src="videos/Video Apr 06, 1 07 43 AM.mp4" type="video/mp4">
-                        <p class="lang-en">Your browser does not support the video tag.</p>
-                        <p class="lang-ar">متصفحك لا يدعم تشغيل الفيديو.</p>
-                    </video>
-                    
-                    <!-- Video Controls Overlay -->
-                    <div class="video-controls">
-                        <button class="video-control-btn play-pause-btn" id="playPauseBtn" aria-label="Play/Pause video">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                            <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
-                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                            </svg>
-                        </button>
-                        
-                        <button class="video-control-btn sound-btn" id="soundBtn" aria-label="Toggle sound">
-                            <svg class="sound-off-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
-                            </svg>
-                            <svg class="sound-on-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
-                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                            </svg>
-                        </button>
-                        
-                        <div class="video-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progressFill"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Video Info Overlay -->
-                    <div class="video-info">
-                        <h3 class="lang-en">Fresh Daily Production</h3>
-                        <h3 class="lang-ar">إنتاج طازج يومياً</h3>
-                        <p class="lang-en">Watch how we prepare your orders with care and precision</p>
-                        <p class="lang-ar">شاهد كيف نحضر طلباتك بعناية ودقة</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    opacity: 0;
+    animation: heroTextSlideUp 1.8s cubic-bezier(0.23, 1, 0.32, 1) 0.8s forwards;
+    will-change: transform, opacity;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="lang-en">Let's Work Together</h2>
-            <h2 class="lang-ar">معك من أول خطوة... اطلب الآن</h2>
-            
-            <p class="lang-en">Looking to launch your food line, fuel an event, or stock your café with premium snacks? <strong>We're ready when you are.</strong></p>
-            <p class="lang-ar">تبي تطلق خط منتجات غذائية، تسوي مناسبة، أو تعبي مقهاك بسناكات مميزة؟ <strong>حنا جاهزين متى ما كنت جاهز.</strong></p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="contact-icon" aria-hidden="true">📩</span>
-                    <a href="mailto:Sales@Prime.sa" style="color: inherit; text-decoration: none;">
-                    <span class="contact-icon" aria-hidden="true">📩</span>
-                    <a href="mailto:Sales@Prime.sa" style="color: inherit; text-decoration: none;">
-                        <span class="contact-text">Sales@Prime.sa</span>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
-                    </svg>
-                    <a href="https://wa.me/966552651344" target="_blank" style="color: white; text-decoration: none;">
-                        <span class="contact-text lang-en">WhatsApp</span>
-                        <span class="contact-text lang-ar">واتساب</span>
-                    </a>
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+@keyframes heroTextSlideUp {
+    0% { 
+        opacity: 0; 
+        transform: translate3d(0, 40px, 0);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    opacity: 0;
+    animation: heroTitleReveal 2.2s cubic-bezier(0.23, 1, 0.32, 1) 1s forwards;
+    will-change: transform, opacity, filter;
+}
+
+@keyframes heroTitleReveal {
+    0% { 
+        opacity: 0; 
+        transform: translate3d(0, 50px, 0) scale(0.9);
+        filter: blur(10px);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translate3d(0, 10px, 0) scale(0.98);
+        filter: blur(2px);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translate3d(0, 0, 0) scale(1);
+        filter: blur(0px);
+    }
+}
+
+.hero-title-main {
+    font-family: 'TestGemola', Arial, sans-serif;
+    font-size: 7rem;
+    font-weight: 100;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 30%, #ffffff 70%, #f0f0f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+    animation: titleGlow 3s cubic-bezier(0.23, 1, 0.32, 1) 3s 1 forwards;
+    position: relative;
+    will-change: transform, text-shadow;
+    transform: translateZ(0);
+}
+
+.hero-title-main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: titleShimmer 2s ease 3.5s 1 forwards;
+}
+
+@keyframes titleGlow {
+    0% { 
+        text-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+        transform: scale(1);
+    }
+    100% { 
+        text-shadow: 0 8px 64px rgba(255, 255, 255, 0.6);
+        transform: scale(1.01);
+    }
+}
+
+@keyframes titleShimmer {
+    0% { 
+        left: -100%; 
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% { 
+        left: 100%; 
+        opacity: 0;
+    }
+}
+
+.hero-title-sub {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    opacity: 0.92;
+    text-transform: lowercase;
+    font-style: italic;
+    animation: subtitleFloat 3s ease 1 forwards;
+    font-family: 'TestGemola', Arial, sans-serif;
+}
+
+@keyframes subtitleFloat {
+    0% { transform: translateY(0px); opacity: 0.92; }
+    100% { transform: translateY(-4px); opacity: 1; }
+}
+
+body[lang="ar"] .hero-title-sub {
+    letter-spacing: 3px;
+    font-style: normal;
+}
+
+.hero-description {
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 1.8;
+    opacity: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    font-family: 'TestGemola', Arial, sans-serif !important;
+    letter-spacing: 0.5px;
+    animation: heroDescriptionFade 1.5s cubic-bezier(0.23, 1, 0.32, 1) 2s forwards;
+    transform: translate3d(0, 30px, 0);
+    will-change: transform, opacity, visibility;
+}
+
+@keyframes heroDescriptionFade {
+    0% { 
+        opacity: 0; 
+        transform: translate3d(0, 30px, 0);
+    }
+    100% { 
+        opacity: 0.88; 
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.hero-cta {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: heroCTASlideIn 1.8s cubic-bezier(0.23, 1, 0.32, 1) 1.8s forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes heroCTASlideIn {
+    0% { 
+        opacity: 0; 
+        transform: translate3d(0, 40px, 0) scale(0.9);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0;
+    animation: scrollIndicatorBounce 2s ease infinite, scrollIndicatorFadeIn 1s cubic-bezier(0.23, 1, 0.32, 1) 2.5s forwards;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform, opacity;
+}
+
+@keyframes scrollIndicatorFadeIn {
+    0% { 
+        opacity: 0; 
+        transform: translate3d(-50%, 30px, 0);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.hero-scroll-indicator:hover {
+    transform: translateX(-50%) scale(1.2) translateY(-5px);
+}
+
+@keyframes scrollIndicatorBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+    40% {
+        transform: translate3d(-50%, -10px, 0);
+    }
+    60% {
+        transform: translate3d(-50%, -5px, 0);
+    }
+}
+
+.scroll-arrow {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #D1D3D4;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    opacity: 0.85;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+}
+
+.scroll-arrow::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(209, 211, 212, 0.5);
+    border-top: none;
+    border-left: none;
+    animation: arrowGlowGray 2s ease infinite alternate;
+}
+
+@keyframes arrowGlowGray {
+    0% { opacity: 0.5; }
+    100% { opacity: 0.9; }
+}
+
+.hero-scroll-indicator:hover .scroll-arrow {
+    opacity: 1;
+    border-color: #B1B3B4;
+}
+
+/* Services Section */
+.services {
+    padding: 12rem 0;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+    transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform, opacity;
+    contain: layout style paint;
+}
+
+.services.animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(209, 211, 212, 0.03) 0%, #ffffff 25%, rgba(209, 211, 212, 0.05) 50%, #ffffff 75%, rgba(209, 211, 212, 0.03) 100%);
+    z-index: 0;
+    animation: backgroundShift 20s cubic-bezier(0.23, 1, 0.32, 1) infinite alternate;
+}
+
+@keyframes backgroundShift {
+    0% { transform: translateX(0) scale(1); }
+    100% { transform: translateX(-30px) scale(1.03); }
+}
+
+.services .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3.8rem;
+    margin-bottom: 6rem;
+    color: #231F20;
+    font-weight: 200;
+    position: relative;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+    transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    letter-spacing: 3px;
+    font-family: 'TestGemola', Arial, sans-serif !important;
+    will-change: transform, opacity;
+}
+
+.section-title.animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #D1D3D4, #B1B3B4, #D1D3D4);
+    transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.5s;
+    border-radius: 2px;
+}
+
+.section-title.animate::after {
+    width: 180px;
+    background: linear-gradient(90deg, #D1D3D4, #B1B3B4, #D1D3D4);
+    box-shadow: 0 4px 16px rgba(209, 211, 212, 0.4);
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10rem;
+    gap: 4rem;
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+    transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    will-change: transform, opacity;
+    contain: layout style paint;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background: linear-gradient(135deg, rgba(35, 31, 32, 0.02) 0%, transparent 50%, rgba(35, 31, 32, 0.02) 100%);
+    border-radius: 40px;
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+}
+
+.service-item:hover::before {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.service-item.animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.service-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+body[lang="ar"] .service-item {
+    flex-direction: row-reverse;
+}
+
+body[lang="ar"] .service-item:nth-child(even) {
+    flex-direction: row;
+}
+
+.service-content {
+    flex: 1;
+    padding: 4rem;
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    will-change: transform;
+}
+
+.service-item:hover .service-content {
+    transform: translate3d(0, -12px, 0) scale(1.02);
+}
+
+body[lang="ar"] .service-content {
+    text-align: right;
+}
+
+.service-image {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow;
+    height: 450px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.service-image:hover {
+    transform: translate3d(0, -8px, 0) scale(1.02);
+    box-shadow: 0 16px 48px rgba(35, 31, 32, 0.08);
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slideshow-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity;
+}
+
+.slideshow-image.active {
+    opacity: 1;
+}
+
+.slideshow-image.fade-out {
+    opacity: 0;
+}
+
+/* Slideshow indicators */
+.slideshow-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.slideshow-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.slideshow-dot.active {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+.service-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    border: none;
+    display: block;
+    transition: all 0.3s ease;
+    filter: none;
+}
+
+.service-content h3 {
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    color: #231F20;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    letter-spacing: 1.5px;
+    font-family: 'TestGemola', Arial, sans-serif !important;
+}
+
+.service-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #D1D3D4, #B1B3B4);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.service-item:hover .service-content h3::after {
+    width: 100px;
+    box-shadow: 0 4px 16px rgba(209, 211, 212, 0.4);
+}
+
+body[lang="ar"] .service-content h3::after {
+    left: auto;
+    right: 0;
+}
+
+.service-content p {
+    margin-bottom: 2.5rem;
+    color: #231F20;
+    line-height: 1.9;
+    font-size: 1.3rem;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    font-family: 'TestGemola', Arial, sans-serif !important;
+    letter-spacing: 0.3px;
+}
+
+.service-item:hover .service-content p {
+    color: #231F20;
+    transform: translateX(8px);
+}
+
+body[lang="ar"] .service-item:hover .service-content p {
+    transform: translateX(-8px);
+}
+
+.service-features {
+    list-style: none;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.service-features li {
+    padding: 1rem 0;
+    color: #231F20;
+    position: relative;
+    padding-left: 2.5rem;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: translateX(0);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-family: 'TestGemola', Arial, sans-serif !important;
+    letter-spacing: 0.2px;
+}
+
+.service-item:hover .service-features li {
+    transform: translateX(12px);
+    color: #231F20;
+}
+
+body[lang="ar"] .service-item:hover .service-features li {
+    transform: translateX(-12px);
+}
+
+body[lang="ar"] .service-features li {
+    padding-left: 0;
+    padding-right: 2.5rem;
+}
+
+.service-features li::before {
+    content: '◆';
+    color: #231F20;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.4em;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: bulletPulse 3s cubic-bezier(0.23, 1, 0.32, 1) infinite alternate;
+}
+
+@keyframes bulletPulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.3); opacity: 1; }
+}
+
+.service-item:hover .service-features li::before {
+    color: #231F20;
+    transform: scale(1.6);
+    text-shadow: 0 4px 8px rgba(35, 31, 32, 0.4);
+}
+
+body[lang="ar"] .service-features li::before {
+    left: auto;
+    right: 0;
+}
+
+/* Video Section */
+.video-section {
+    background: linear-gradient(135deg, rgba(209, 211, 212, 0.05) 0%, #ffffff 25%, rgba(209, 211, 212, 0.08) 50%, #ffffff 75%, rgba(209, 211, 212, 0.05) 100%);
+    padding: 8rem 0;
+    margin-top: 6rem;
+    position: relative;
+    overflow: hidden;
+    contain: layout style paint;
+}
+
+.video-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 20%, rgba(35, 31, 32, 0.03) 0%, transparent 50%);
+    animation: videoBackgroundFloat 15s cubic-bezier(0.23, 1, 0.32, 1) infinite alternate;
+}
+
+@keyframes videoBackgroundFloat {
+    0% { transform: translateX(0) scale(1); }
+    100% { transform: translateX(30px) scale(1.03); }
+}
+
+.video-container {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(35, 31, 32, 0.2);
+    background: #000;
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: translate3d(0, 0, 0);
+    will-change: transform, box-shadow;
+}
+
+.video-container:hover {
+    transform: translate3d(0, -10px, 0) scale(1.02);
+    box-shadow: 0 48px 120px rgba(35, 31, 32, 0.3);
+}
+
+.main-video {
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: brightness(1.05) contrast(1.05) saturate(1.05);
+    will-change: filter;
+    transform: translateZ(0);
+}
+
+.video-container:hover .main-video {
+    filter: brightness(1.1) contrast(1.08) saturate(1.1);
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+    padding: 3rem 2rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    backdrop-filter: blur(20px);
+}
+
+.video-container:hover .video-controls {
+    opacity: 1;
+}
+
+.video-progress {
+    flex: 1;
+    margin: 0 1.5rem;
+}
+
+.video-info {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+    color: white;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    will-change: transform, opacity;
+}
+
+.video-container:hover .video-info {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.video-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    animation: videoTitleGlow 4s cubic-bezier(0.23, 1, 0.32, 1) infinite alternate;
+    font-family: 'TestGemola', Arial, sans-serif !important;
 }
 
 @keyframes videoTitleGlow {
-    0% {
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.1);
-    }
-    100% {
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.2);
-    }
-                </div>
-            </div>
-        </div>
-    </section>
+    0% { text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8); }
+    100% { text-shadow: 2px 2px 24px rgba(0, 0, 0, 0.9), 0 0 32px rgba(255, 255, 255, 0.3); }
+}
 
-    <!-- Load non-critical JavaScript -->
-    <script src="js/performance.js" defer></script>
-    <script src="script.js"></script>
-</body>
-</html>
+.video-info p {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    font-weight: 300;
+    line-height: 1.7;
+    font-family: 'TestGemola', Arial, sans-serif !important;
+    letter-spacing: 0.3px;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #231F20 0%, #2a2426 25%, #231F20 50%, #2a2426 75%, #1a1718 100%);
+    color: white;
+    padding: 10rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    contain: layout style paint;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    animation: contactBackgroundFloat 12s cubic-bezier(0.23, 1, 0.32, 1) infinite alternate;
+}
+
+@keyframes contactBackgroundFloat {
+    0% { transform: translateX(0) scale(1); }
+    100% { transform: translateX(-40px) scale(1.08); }
+}
+
+.contact .container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    font-weight: 200;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+    transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    letter-spacing: 3px;
+    position: relative;
+    font-family: 'TestGemola', Arial, sans-serif !important;
+    will-change: transform, opacity;
+}
+
+.contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, white, transparent);
+    transition: width 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.8s;
+}
+
+.contact h2.animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.contact h2.animate::after {
+    width: 120px;
+}
+
+.contact p {
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1) 0.3s;
+    line-height: 1.8;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'TestGemola', Arial, sans-serif !important;
+    letter-spacing: 0.5px;
+    will-change: transform, opacity;
+}
+
+.contact p.animate {
+    opacity: 0.92;
+    transform: translate3d(0, 0, 0);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2.5rem 4rem;
+    border-radius: 20px;
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0) scale(0.9);
+    cursor: pointer;
+    will-change: transform, opacity, background, border-color, box-shadow;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-item:hover::before {
+    left: 100%;
+}
+
+.contact-item.animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+.contact-item:hover {
+    background: rgba(209, 211, 212, 0.15);
+    transform: translate3d(0, -12px, 0) scale(1.08);
+    border-color: rgba(209, 211, 212, 0.3);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.3) rotate(8deg);
+}
+
+.contact-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    font-family: 'TestGemola', Arial, sans-serif !important;
+    letter-spacing: 0.5px;
+}
+
+.contact-item:hover .contact-text {
+    transform: translate3d(8px, 0, 0);
+    color: #FFFFFF;
+}
