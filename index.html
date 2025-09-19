@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PRIME by Asma - Premium catering services, white label food production, and hotel & café supply in Saudi Arabia. Elevating culinary experiences with precision and passion.">
+    <meta name="keywords" content="catering, food services, white label, hotels, cafes, Saudi Arabia, PRIME, Asma">
+    <meta name="author" content="PRIME by Asma">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="font/Gemola 400.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="images/image_16.jpeg" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//i.ibb.co">
+    
     <title>PRIME by Asma - Catering & Food Services</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Critical CSS inlined for faster rendering -->
+    <style>
+        /* Critical above-the-fold styles */
+        body{font-family:'TestGemola',Arial,sans-serif!important;margin:0;padding:0;overflow-x:hidden}
+        .hero{position:relative;width:100%;height:100vh;min-height:800px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#231F20}
+        nav{position:fixed;top:0;left:0;right:0;background:rgba(35,31,32,0.98);backdrop-filter:blur(30px);padding:0.8rem 0;z-index:1000;height:80px}
+        .nav-container{max-width:1400px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:80px}
+    </style>
 </head>
 <body lang="en" dir="ltr">
     <!-- Scroll to Top Button -->
@@ -51,6 +72,7 @@
         <div class="hero-background">
             <div class="hero-overlay"></div>
             <img src="images/image_16.jpeg" alt="PRIME Catering" class="hero-image">
+            <img src="images/image_16.jpeg" alt="PRIME Catering Hero Background" class="hero-image" loading="eager" fetchpriority="high">
         </div>
         <div class="hero-content">
             <div class="hero-text">
@@ -106,7 +128,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="images/image_01.jpg" alt="Catering Services" class="service-main-image">
+                    <img src="images/image_01.jpg" alt="Professional catering services for corporate events and special occasions" class="service-main-image" loading="lazy">
                 </div>
             </div>
 
@@ -132,7 +154,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="images/image_06.jpg" alt="White Label Services" class="service-main-image">
+                    <img src="images/image_06.jpg" alt="White label food production and packaging services" class="service-main-image" loading="lazy">
                 </div>
             </div>
 
@@ -158,7 +180,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="images/image_11.jpg" alt="Hotels & Cafés Services" class="service-main-image">
+                    <img src="images/image_11.jpg" alt="Fresh baked goods and snacks for hotels and cafés" class="service-main-image" loading="lazy">
                 </div>
             </div>
         </div>
@@ -250,6 +272,8 @@
         </div>
     </section>
 
+    <!-- Load non-critical JavaScript -->
+    <script src="js/performance.js" defer></script>
     <script src="script.js"></script>
 </body>
 </html>

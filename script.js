@@ -1,5 +1,6 @@
 // Performance utilities
-const throttle = (func, limit) => {
+// Use optimized utilities from performance.js
+const throttle = window.PerformanceOptimizer?.throttle || ((func, limit) => {
     let inThrottle;
     return function() {
         const args = arguments;
@@ -10,9 +11,9 @@ const throttle = (func, limit) => {
             setTimeout(() => inThrottle = false, limit);
         }
     }
-};
+});
 
-const debounce = (func, wait) => {
+const debounce = window.PerformanceOptimizer?.debounce || ((func, wait) => {
     let timeout;
     return function executedFunction(...args) {
         const later = () => {
@@ -22,7 +23,7 @@ const debounce = (func, wait) => {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
-};
+});
 
 // Cached DOM elements
 const DOMCache = {
@@ -203,24 +204,19 @@ function initVideoPlayer() {
 }
 
 // Enhanced parallax effect with performance optimization
-let ticking = false;
-
 const updateParallax = throttle(() => {
     const scrolled = window.pageYOffset;
     
-    if (scrolled < window.innerHeight) {
-        if (DOMCache.heroImage) {
-            const rate = scrolled * -0.2;
-            DOMCache.heroImage.style.transform = `translate3d(0, ${rate}px, 0) scale(${1.02 + scrolled * 0.0001})`;
-        }
+    if (scrolled < window.innerHeight && DOMCache.heroImage) {
+        const rate = scrolled * -0.15; // Reduced for better performance
+        DOMCache.heroImage.style.transform = `translate3d(0, ${rate}px, 0)`;
         
         if (DOMCache.heroContent) {
-            const rate = scrolled * 0.1;
-            DOMCache.heroContent.style.transform = `translate3d(0, ${rate}px, 0)`;
-            DOMCache.heroContent.style.opacity = 1 - (scrolled / window.innerHeight) * 0.2;
+            const contentRate = scrolled * 0.08; // Reduced for better performance
+            DOMCache.heroContent.style.transform = `translate3d(0, ${contentRate}px, 0)`;
         }
     }
-}, 16); // ~60fps
+}, 16);
 
 // Smooth navigation background transition
 let lastScrollTop = 0;
@@ -379,7 +375,7 @@ function handleResize() {
 }
 
 // Initialize on page load
-window.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Initialize DOM cache
     DOMCache.init();
     
@@ -418,14 +414,14 @@ window.addEventListener('DOMContentLoaded', function() {
     });
     
     // Clean up will-change after animations complete
-    setTimeout(() => {
+    requestIdleCallback(() => {
         const animatedElements = document.querySelectorAll('[style*="will-change"]');
         animatedElements.forEach(el => {
             if (el.style.willChange) {
                 el.style.willChange = 'auto';
             }
         });
-    }, 5000);
+    });
 });
 
 // Event listeners with proper cleanup
