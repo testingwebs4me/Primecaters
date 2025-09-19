@@ -66,6 +66,7 @@
     .nav-container {
         padding: 0 20px;
         height: 80px;
+        min-height: 80px;
     }
 
     nav {

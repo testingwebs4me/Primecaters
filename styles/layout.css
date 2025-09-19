@@ -40,6 +40,7 @@ nav:hover {
     align-items: center;
     position: relative;
     height: 120px;
+    min-height: 120px;
 }
 
 body[lang="ar"] .nav-container {
@@ -92,6 +93,8 @@ body[lang="ar"] .nav-container {
     display: flex;
     gap: 3rem;
     list-style: none;
+    align-items: center;
+    height: 100%;
 }
 
 body[lang="ar"] .nav-links {
@@ -103,7 +106,7 @@ body[lang="ar"] .nav-links {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
-    padding: 1.6rem 3.2rem;
+    padding: 2rem 3.2rem;
     border-radius: 50px;
     transition: all 0.3s ease;
     border: 1px solid transparent;
@@ -111,6 +114,9 @@ body[lang="ar"] .nav-links {
     overflow: hidden;
     backdrop-filter: blur(10px);
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
 }
 
 .nav-links a::before {
